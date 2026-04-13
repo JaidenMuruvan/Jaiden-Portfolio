@@ -4,7 +4,7 @@ window.addEventListener("load", () => {
     const heroText = document.querySelector(".hero-text");
     const heroImage = document.querySelector(".hero-image");
 
-    const holdTime = 0;   // how long loader stays 1500
+    const holdTime = 1500;   // how long loader stays 1500
     const fadeTime = 100;    // fade out duration
 
     // loader stays for hold time
