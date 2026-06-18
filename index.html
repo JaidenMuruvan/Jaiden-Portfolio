@@ -3,30 +3,128 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jaiden Muruvan | Portfolio</title>
+    <title>Jaiden Muruvan | Front-End Developer % Game Designer</title>
 
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <!-- PRELOADER -->
     <div id="loader">
-      <div class="loader-content">
-        <h1 class="loader-title">Jaiden Muruvan</h1>
-        <p class="loader-subtitle">
-          Portfolio Loading<span class="dots"></span>
-        </p>
+      <div class="loader-inner">
+        <p class="loader-name">Jaiden Muruvan</p>
+        <div class="loader-line-wrap">
+          <div class="loader-line-fill"></div>
+        </div>
       </div>
     </div>
     <!-- Navigation -->
     <nav class="navbar">
-      <div class="nav-container">
-        <a href="index.html" class="logo" id="logo"> Jaiden Muruvan</a>
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><button id="theme-toggle" class="theme-btn">🌙</button></li>
-        </ul>
+      <div class="container nav-inner">
+        <a href="#" class="nav-logo">Jaiden Muruvan</a>
+
+        <div class="nav-right">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+
+          <button
+            id="theme-toggle"
+            class="theme-btn"
+            aria-label="Toggle dark mode"
+          >
+            <!-- Moon (light mode) -->
+            <svg
+              id="icon-moon"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+            </svg>
+            <!-- Sun (dark mode) -->
+            <svg
+              id="icon-sun"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle cx="12" cy="12" r="5" />
+              <line
+                x1="12"
+                y1="1"
+                x2="12"
+                y2="3"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+              <line
+                x1="12"
+                y1="21"
+                x2="12"
+                y2="23"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+              <line
+                x1="4.22"
+                y1="4.22"
+                x2="5.64"
+                y2="5.64"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+              <line
+                x1="18.36"
+                y1="18.36"
+                x2="19.78"
+                y2="19.78"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+              <line
+                x1="1"
+                y1="12"
+                x2="3"
+                y2="12"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+              <line
+                x1="21"
+                y1="12"
+                x2="23"
+                y2="12"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+              <line
+                x1="4.22"
+                y1="19.78"
+                x2="5.64"
+                y2="18.36"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+              <line
+                x1="18.36"
+                y1="5.64"
+                x2="19.78"
+                y2="4.22"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
+          </button>
+        </div>
       </div>
     </nav>
     <!-- HERO SECTION -->
@@ -34,41 +132,95 @@
       <div class="hero-bg hero-light"></div>
       <div class="hero-bg hero-dark"></div>
 
-      <div class="hero-content">
+      <div class="container hero-content">
         <div class="hero-text">
-          <h1>Hi, I am Jaiden Muruvan</h1>
-          <h2>
-            <span id="typed-text"></span>
-            <span class="cursor">|</span>
-          </h2>
-          <p>
-            I am a front-end web developer and game designer. I design and build
-            interactive experiences using web technologies and Unity.
+          <p class="hero-eyebrow">Portfolio · 2026</p>
+          <h1 class="hero-name">Jaiden Muruvan</h1>
+          <div class="hero-role">
+            <span id="typed-text"></span><span class="cursor">|</span>
+          </div>
+          <p class="hero-bio">
+            Front-end developer and game designer building interactive
+            experiences on the web and in Unity. Currently finishing a Bachelor
+            of Digital Arts and actively looking for my next opportunity.
           </p>
-          <div class="hero-buttons">
-            <a href="#projects" class="btn-primary">View My Work</a>
-            <a href="#contact" class="btn-secondary">Contact Me</a>
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">View My Work</a>
+            <a
+              href="assets/cv/JaidenMuruvanCV.pdf"
+              download
+              class="btn btn-outline"
+              target="_blank"
+            >
+              <!-- Download icon -->
+              <svg
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+                style="width: 16px; height: 16px; fill: currentColor"
+              >
+                <path
+                  d="M10 12.586l-3.293-3.293-1.414 1.414L10 15.414l4.707-4.707-1.414-1.414L10 12.586zM9 3h2v8H9V3z"
+                />
+                <path d="M3 17h14v2H3z" />
+              </svg>
+              Download CV
+            </a>
+            <a href="#contact" class="btn btn-outline">Contact Me</a>
           </div>
         </div>
 
         <div class="hero-image">
-          <img src="assets/images/portpic.jpeg" alt="Hero Image" />
+          <img src="assets/images/portpic.jpeg" alt="Jaiden Muruvan" />
         </div>
       </div>
     </header>
-    <!-- Introduction -->
-    <section id="about" class="section">
-      <div class="section-container">
-        <h3>About Me</h3>
-        <p>
-          I am a Bachelor of Digital Arts student with a strong foundation in
-          design thinking, digital storytelling and creative problem solving.
-          Experienced in academic and personal projects across digital media, UX
-          / UI and visual design. Strong problem-solver with a passion for
-          building systems and learning new technologies. Currently I am
-          learning how to build web apps in React and I am also learning how to
-          use databases and backend technologies.
-        </p>
+    <!-- ABOUT SECTION -->
+    <section id="about" class="section about-section">
+      <div class="container">
+        <p class="section-label">Background</p>
+        <h2 class="section-title">About Me</h2>
+
+        <div class="about-grid">
+          <div class="about-body">
+            <p>
+              I'm a final-year Bachelor of Digital Arts student with a strong
+              foundation in design thinking, digital storytelling and creative
+              problem solving. My work sits at the intersection of code and
+              craft, whether that's architecting gameplay systems in Unity or
+              building polished web experiences from scratch.
+            </p>
+            <p>
+              I've shipped projects across game design, interactive media and
+              web development, working solo and in teams. Right now I am
+              deepening my React and back-end skills, and building production
+              web apps through real client work.
+            </p>
+            <p>
+              I care about the details: responsive layouts, thoughtful UI, code
+              that's readable. I'm looking for a role where I can keep growing
+              fast alongside people who take quality seriously.
+            </p>
+          </div>
+
+          <div class="about-stats">
+            <div class="stat-item">
+              <div class="stat-number">8+</div>
+              <div class="stat-label">Projects shipped</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">4</div>
+              <div class="stat-label">Years of study</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">5</div>
+              <div class="stat-label">Team collaborations</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">2</div>
+              <div class="stat-label">Production web apps</div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
