@@ -1,28 +1,24 @@
-/* ============================================================
-   script.js  —  Portfolio main script
-   ============================================================ */
-
-// ── GSAP plugins ─────────────────────────────────────────────
+// GSAP plugins
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
-// ── PRELOADER ────────────────────────────────────────────────
+// PRELOADER
 window.addEventListener("load", () => {
   const loader = document.getElementById("loader");
   const heroText = document.querySelector(".hero-text");
   const heroImg = document.querySelector(".hero-image");
 
-  // Hold for animation (name + line sweep ≈ 1.9s), then fade
+  // Hold for animation (name + line sweep, 1.9s) then fade
   setTimeout(() => {
     loader.classList.add("fade-out");
     setTimeout(() => {
       heroText?.classList.add("active");
       heroImg?.classList.add("active");
       setTimeout(startTyping, 120);
-    }, 600); // matches CSS transition
+    }, 600); // should matche CSS transition
   }, 2100);
 });
 
-// ── TYPING EFFECT ────────────────────────────────────────────
+// TYPING EFFECT
 const ROLES = [
   "Front-End Developer",
   "Game Designer",
@@ -61,7 +57,7 @@ function typeStep() {
   setTimeout(typeStep, deleting ? 38 : 75);
 }
 
-// ── DARK MODE ────────────────────────────────────────────────
+// DARK MODE
 const themeBtn = document.getElementById("theme-toggle");
 
 (function initTheme() {
@@ -78,7 +74,7 @@ themeBtn?.addEventListener("click", () => {
   );
 });
 
-// ── SMOOTH NAV SCROLL ────────────────────────────────────────
+// SMOOTH NAV SCROLL
 document.querySelectorAll('a[href^="#"]').forEach((a) => {
   a.addEventListener("click", (e) => {
     e.preventDefault();
@@ -91,7 +87,7 @@ document.querySelectorAll('a[href^="#"]').forEach((a) => {
   });
 });
 
-// ── ACTIVE NAV LINK ──────────────────────────────────────────
+// ACTIVE NAV LINK
 const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
 
 ScrollTrigger.create({
@@ -111,8 +107,8 @@ ScrollTrigger.create({
   },
 });
 
-// ── SKILLS RENDER ─────────────────────────────────────────────
-// (icons.js must be loaded first)
+// SKILLS RENDER (Icons should load first)
+
 document.addEventListener("DOMContentLoaded", () => {
   if (typeof renderSkills === "function") renderSkills();
   initSkillsAnimation();
@@ -120,9 +116,8 @@ document.addEventListener("DOMContentLoaded", () => {
   initContactForm();
 });
 
-// ── GSAP: SKILLS FLOAT UP ────────────────────────────────────
+// GSAP SKILLS FLOAT UP
 function initSkillsAnimation() {
-  // Wait for skills-row elements to exist (rendered by icons.js)
   setTimeout(() => {
     document.querySelectorAll(".skills-row").forEach((row) => {
       const cards = row.querySelectorAll(".skill-card");
@@ -142,9 +137,9 @@ function initSkillsAnimation() {
   }, 100);
 }
 
-// ── GSAP: PROJECT CARDS ──────────────────────────────────────
+// GSAP PROJECT CARDS
 function initProjectCardsAnimation() {
-  // Featured cards — slide in from matching side
+  // Featured cards, slide in from matching side
   document.querySelectorAll(".proj-card").forEach((card) => {
     const fromLeft = !card.classList.contains("reverse");
     const imgWrap = card.querySelector(".proj-img-wrap");
@@ -176,7 +171,7 @@ function initProjectCardsAnimation() {
     });
   });
 
-  // Mini cards — fade up staggered
+  // Mini cards fade up
   document.querySelectorAll(".mini-card").forEach((card, i) => {
     gsap.to(card, {
       y: 0,
@@ -193,7 +188,7 @@ function initProjectCardsAnimation() {
   });
 }
 
-// ── LIGHTBOX ─────────────────────────────────────────────────
+// LIGHTBOX
 const lightbox = document.getElementById("lightbox");
 const lbImg = document.getElementById("lb-img");
 const lbCaption = document.getElementById("lb-caption");
@@ -246,7 +241,7 @@ document.querySelectorAll(".proj-img-wrap[data-images]").forEach((wrap) => {
   });
 });
 
-// ── CONTACT FORM ─────────────────────────────────────────────
+// CONTACT FORM
 function initContactForm() {
   const form = document.getElementById("contact-form");
   const success = document.getElementById("form-success");
@@ -321,14 +316,14 @@ function initContactForm() {
   });
 }
 
-// ── BACK TO TOP — progress ring ───────────────────────────────
+// BACK TO TOP progress ring
 (function initBackToTop() {
   const btn = document.getElementById("back-to-top");
   const ring = document.getElementById("btt-ring");
   if (!btn || !ring) return;
 
   const R = 21; // radius (matches SVG)
-  const CIRC = 2 * Math.PI * R; // ~131.9
+  const CIRC = 2 * Math.PI * R;
   ring.style.strokeDasharray = CIRC;
   ring.style.strokeDashoffset = CIRC; // start empty
 
