@@ -1,13 +1,9 @@
-/* ============================================================
-   IMPORTS
-   ============================================================ */
+/* IMPORTS */
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap");
 
-/* ============================================================
-   DESIGN TOKENS
-   ============================================================ */
+/* DESIGN PRESETS */
 :root {
-  /* Palette */
+  /* Colour Palette */
   --bg: #f7f6f2;
   --bg-surface: #eeecea;
   --text: #111318;
@@ -17,7 +13,7 @@
   --border: rgba(17, 19, 24, 0.1);
   --nav-bg: rgba(247, 246, 242, 0.88);
 
-  /* Type */
+  /* Font */
   --font-display: "DM Serif Display", Georgia, serif;
   --font-body: "Inter", system-ui, sans-serif;
 
@@ -27,7 +23,7 @@
   --radius: 10px;
   --radius-lg: 16px;
 
-  /* Motion */
+  /* Animation */
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -41,9 +37,7 @@ body.dark-mode {
   --nav-bg: rgba(17, 19, 24, 0.9);
 }
 
-/* ============================================================
-   RESET & BASE
-   ============================================================ */
+/* BASE */
 *,
 *::before,
 *::after {
@@ -77,9 +71,7 @@ a {
   text-decoration: none;
 }
 
-/* ============================================================
-   PRELOADER
-   ============================================================ */
+/* PRELOADER */
 #loader {
   position: fixed;
   inset: 0;
@@ -148,9 +140,7 @@ a {
   }
 }
 
-/* ============================================================
-   LAYOUT HELPERS
-   ============================================================ */
+/* LAYOUT HELPERS */
 .container {
   width: 90%;
   max-width: var(--container);
@@ -188,9 +178,7 @@ a {
   border-radius: 999px;
 }
 
-/* ============================================================
-   NAVBAR
-   ============================================================ */
+/* NAVBAR */
 .navbar {
   position: fixed;
   top: 0;
@@ -331,9 +319,7 @@ body.dark-mode #icon-sun {
   scroll-margin-top: 70px;
 }
 
-/* ============================================================
-   HERO
-   ============================================================ */
+/* HERO SECTION */
 .hero {
   position: relative;
   min-height: 100vh;
@@ -480,9 +466,7 @@ body.dark-mode .hero-dark {
   }
 }
 
-/* ============================================================
-   BUTTONS
-   ============================================================ */
+/* BUTTONS */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -509,11 +493,11 @@ body.dark-mode .hero-dark {
 .btn-primary {
   background: var(--accent);
   color: #111318;
-  box-shadow: 0 2px 16px rgba(232, 168, 56, 0.25);
+  box-shadow: 0 2px 16px rgba(56, 109, 232, 0.25);
 }
 
 .btn-primary:hover {
-  box-shadow: 0 8px 24px rgba(232, 168, 56, 0.4);
+  box-shadow: 0 8px 24px rgba(56, 109, 232, 0.25);
 }
 
 .btn-outline {
