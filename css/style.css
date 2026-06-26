@@ -512,9 +512,7 @@ body.dark-mode .hero-dark {
   box-shadow: 0 4px 16px rgba(232, 168, 56, 0.12);
 }
 
-/* ============================================================
-   ABOUT
-   ============================================================ */
+/* ABOUT SECTION */
 .about-section {
   background: var(--bg-surface);
 }
@@ -565,11 +563,9 @@ body.dark-mode .hero-dark {
   color: var(--text-muted);
 }
 
-/* ============================================================
-   PROJECTS
-   ============================================================ */
-.projects-section {
-}
+/* PROJECTS SECTION */
+/* .projects-section {
+} */
 
 /* Featured project card */
 .proj-card {
@@ -599,7 +595,7 @@ body.dark-mode .hero-dark {
   direction: ltr;
 }
 
-/* Image area — clickable gallery trigger */
+/* Image area, clickable gallery trigger */
 .proj-img-wrap {
   position: relative;
   overflow: hidden;
@@ -721,7 +717,7 @@ body.dark-mode .hero-dark {
   margin-top: 0.5rem;
 }
 
-/* ── WIP badge ────────────────────────────────── */
+/* WIP Badge */
 .wip-badge {
   display: inline-flex;
   align-items: center;
@@ -862,9 +858,7 @@ body.dark-mode .hero-dark {
   gap: 0.35rem;
 }
 
-/* ============================================================
-   IMAGE LIGHTBOX / GALLERY
-   ============================================================ */
+/* IMAGE LIGTHBOX */
 .lightbox {
   position: fixed;
   inset: 0;
@@ -944,9 +938,7 @@ body.dark-mode .hero-dark {
   right: -52px;
 }
 
-/* ============================================================
-   SKILLS
-   ============================================================ */
+/* SKILLS SECTION */
 .skills-section {
   background: var(--bg-surface);
 }
@@ -986,8 +978,8 @@ body.dark-mode .hero-dark {
 }
 
 .skill-card svg {
-  width: 28px;
-  height: 28px;
+  width: 36px;
+  height: 36px;
   flex-shrink: 0;
 }
 
@@ -997,9 +989,7 @@ body.dark-mode .hero-dark {
   transform: translateY(-3px);
 }
 
-/* ============================================================
-   CONTACT
-   ============================================================ */
+/* CONTACT SECTION */
 .contact-section {
   background: var(--bg);
 }
@@ -1150,9 +1140,7 @@ body.dark-mode .hero-dark {
   color: var(--accent);
 }
 
-/* ============================================================
-   FOOTER
-   ============================================================ */
+/* FOOTER */
 .footer {
   background: var(--bg-surface);
   border-top: 1px solid var(--border);
@@ -1214,9 +1202,7 @@ body.dark-mode .hero-dark {
   color: var(--text-muted);
 }
 
-/* ============================================================
-   BACK TO TOP — progress ring
-   ============================================================ */
+/* BACK TO TOP  */
 #back-to-top {
   position: fixed;
   bottom: 2rem;
@@ -1284,9 +1270,7 @@ body.dark-mode .hero-dark {
   transition: fill 0.2s ease;
 }
 
-/* ============================================================
-   RESPONSIVE
-   ============================================================ */
+/* =RESPONSIVENESS */
 @media (max-width: 900px) {
   .hero-content {
     grid-template-columns: 1fr;
@@ -1356,9 +1340,7 @@ body.dark-mode .hero-dark {
   }
 }
 
-/* ============================================================
-   REDUCED MOTION
-   ============================================================ */
+/* REDUCED ANIMATIONS */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
