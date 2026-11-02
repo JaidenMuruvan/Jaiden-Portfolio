@@ -170,23 +170,22 @@ function initProjectCardsAnimation() {
       },
     });
   });
-
-  // Mini cards fade up
-  document.querySelectorAll(".mini-card").forEach((card, i) => {
-    gsap.to(card, {
-      y: 0,
-      opacity: 1,
-      duration: 0.6,
-      delay: (i % 3) * 0.1,
-      ease: "power3.out",
-      scrollTrigger: {
-        trigger: card,
-        start: "top 86%",
-        toggleActions: "play reverse play reverse",
-      },
-    });
-  });
 }
+// Mini cards fade up
+document.querySelectorAll(".mini-card").forEach((card, i) => {
+  gsap.to(card, {
+    y: 0,
+    opacity: 1,
+    duration: 0.6,
+    delay: (i % 3) * 0.1,
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: card,
+      start: "top 86%",
+      toggleActions: "play reverse play reverse",
+    },
+  });
+});
 
 // LIGHTBOX
 const lightbox = document.getElementById("lightbox");
